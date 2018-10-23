@@ -10,7 +10,7 @@ using namespace std;
 string name;
 char characterToFind;
 
-int main() {
+void analyse() {
 	cout << "String analyser program" << endl;
 	cout << "------------------------" << endl;
 
@@ -38,12 +38,13 @@ int main() {
 
 	cout << "---------USING string.find() APPROACH----------" << endl;
 	cout << "the character you chose is at index " << name.find(characterToFind) << endl;
-		
+
 	cout << "-----------FORLOOP/CONDITIONAL APPROACH-----------" << endl;
 	//if the index of the character in the name string does not have a position, it will exit.
 	if (name.find(characterToFind) == name.npos) {
 		cout << "doesnt exist" << endl;
-	} else {
+	}
+	else {
 		for (int j = 0; j < name.length(); j++) {
 			if (name[j] == characterToFind) {
 				cout << "The letter " << name[j] << " is at index: " << j << endl;
@@ -51,4 +52,8 @@ int main() {
 		}
 	}
 	system("pause");
+}
+
+int main() {
+	analyse();
 }
